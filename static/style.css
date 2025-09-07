@@ -1,0 +1,17 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    background-color: cadetblue;
+    padding: 10px;
+    color: aliceblue;
+}
+p,a{
+    padding: 30px;
+}
+input ,textarea{
+    padding: 5px;
+}
