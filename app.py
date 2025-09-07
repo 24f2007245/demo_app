@@ -28,7 +28,7 @@ def contact():
         user_email= request.form.get('email')
         message= request.form.get('message')
         if not message:
-            print(request.form.get('message'))
+           
             return render_template('sampark.html')
         
         # Create an instance of UserData
