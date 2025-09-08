@@ -21,3 +21,9 @@ textarea{
     padding: 7px;
     width: 95%;
 }
+button{
+    padding: 10px;
+    background-color:cadetblue;
+    color: white;
+    border: none;
+}
