@@ -12,6 +12,12 @@
 p,a{
     padding: 30px;
 }
-input ,textarea{
+input{
     padding: 5px;
+
+}
+
+textarea{
+    padding: 7px;
+    width: 95%;
 }
