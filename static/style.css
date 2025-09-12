@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .nav {
@@ -9,14 +10,13 @@
     padding: 10px;
     color: aliceblue;
 }
-p,a{
+.content{
     padding: 30px;
+    background-color: whitesmoke;
 }
 input{
     padding: 5px;
-
 }
-
 textarea{
     padding: 7px;
     width: 95%;
@@ -26,4 +26,20 @@ button{
     background-color:cadetblue;
     color: white;
     border: none;
+}
+h1{
+    color:cadetblue;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* hover effect */
+a:hover{
+    color: green;
+}
+button:hover{
+    background-color: white;
+    color: cadetblue;
+    border: 1px solid cadetblue;
+
 }
