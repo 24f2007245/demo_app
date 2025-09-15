@@ -1,19 +1,19 @@
 from flask import Flask,render_template, request, redirect,url_for
 from flask_sqlalchemy import SQLAlchemy
-from flask_mail import Mail, Message
+# from flask_mail import Mail, Message
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///project.db'
 db = SQLAlchemy()
 db.init_app(app)
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'chhotukumar99450@gmail.com'
-app.config['MAIL_PASSWORD'] = 'xakb qeot jejb rqsy'  
-app.config['MAIL_DEFAULT_SENDER'] = 'chhotukumar99450@gmail.com'
+# app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+# app.config['MAIL_PORT'] = 587
+# app.config['MAIL_USE_TLS'] = True
+# app.config['MAIL_USERNAME'] = 'chhotukumar99450@gmail.com'
+# app.config['MAIL_PASSWORD'] = 'xakb qeot jejb rqsy'  # this app key is not in working condition.
+# app.config['MAIL_DEFAULT_SENDER'] = 'chhotukumar99450@gmail.com'
 
-mail = Mail(app)
+# mail = Mail(app)
 
 class UserData(db.Model):
     __tablename__='user_data'
@@ -45,25 +45,25 @@ def contact():
         db.session.commit()
 
          # Send email using Flask-Mail
-        msg = Message(
-            subject="New Contact Form Submission",
-            recipients=[user_email,'chhotukumar99450@gmail.com'],  # Who receives the email
-            body=f"""
-Dear {user_name},
-We received your message successfully :
+#         msg = Message(
+#             subject="New Contact Form Submission",
+#             recipients=[user_email,'chhotukumar99450@gmail.com'],  # Who receives the email
+#             body=f"""
+# Dear {user_name},
+# We received your message successfully :
 
-Name: {user_name}
-Email: {user_email}
-Message:
-{message}
+# Name: {user_name}
+# Email: {user_email}
+# Message:
+# {message}
 
-Thank You for Contacting Us.
-"""
-        )
-        try:
-            mail.send(msg)
-        except Exception as e:
-            print("Error sending email:", e)
+# Thank You for Contacting Us.
+# """
+#         )
+#         try:
+#             mail.send(msg)
+#         except Exception as e:
+#             print("Error sending email:", e)
 
         return redirect(url_for('index'))
     return render_template('sampark.html')
