@@ -20,20 +20,23 @@ input{
 textarea{
     padding: 7px;
     width: 95%;
+    border: none;
 }
 button{
     padding: 10px;
-    background-color:cadetblue;
-    color: white;
-    border: none;
+    background-color: white;
+    color: cadetblue;
+    border: 1px solid cadetblue;
+
 }
 h1{
     color:cadetblue;
     margin-top: 10px;
     margin-bottom: 20px;
+    
 }
 a{
-    color: green;
+    color:teal;
 }
 
 /* hover effect */
@@ -41,8 +44,8 @@ a:hover{
     color: orange;
 }
 button:hover{
-    background-color: white;
-    color: cadetblue;
-    border: 1px solid cadetblue;
-
+    
+    background-color:cadetblue;
+    color: white;
+    border: none;
 }
